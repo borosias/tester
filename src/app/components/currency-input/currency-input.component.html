@@ -1,0 +1,6 @@
+<div class="input-wrapper">
+    <input type="number" [(ngModel)]="currencyAmount" (ngModelChange)="currencyAmountChange.emit(currencyAmount)">
+    <select class="form-control" [(ngModel)]="selectedCurrency" (ngModelChange)="selectedCurrencyChange.emit(selectedCurrency)">
+        <option *ngFor="let currency of currencies" [value]='currency'>{{ currency }}</option>
+    </select>
+</div>

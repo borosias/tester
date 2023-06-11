@@ -1,1 +1,166 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+.main-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #0C1010;
+  font-family: Poppins, sans-serif;
+  color: aliceblue;
+}
+
+header {
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(63,62,63,0.7) ;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+ul{
+  list-style: none;
+  padding: 16px;
+  margin: 0 auto;
+}
+.header_block{
+  display: flex;
+}
+section {
+  width: 40%;
+  background-color: rgba(203, 203, 203, 0.5);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+div {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  text-shadow: #0C1010 2px 2px 1px ;
+  font-size: 1.8em ;
+}
+
+.currency-block{
+  padding: 3vh 0 6vh 0;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+currency-input{
+  width: 50%
+}
+.input-wrapper{
+  width: 100%;
+  padding: 0;
+}
+select, input {
+
+  width: 85%;
+  margin: 5px auto;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+input[type="number"] {
+  background: none;
+  padding: 8px 0;
+  border-bottom: 1px solid #ffffff;
+  color: aliceblue;
+  font-size: 16px;
+}
+input[type="number"]::placeholder {
+  color: #ffffff;
+  font-size: 1.0em;
+  font-style: oblique;
+}
+
+/* Стилизация выбора */
+select {
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"><polygon points="0,0 12,0 6,8"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+/* При наведении курсора на выбор */
+select:hover {
+  border-color: #888;
+}
+
+/* При фокусе на выборе */
+input[type="number"], select:focus {
+  outline: none;
+}
+
+/* Стилизация стрелки раскрывающегося списка (только для Chrome и Firefox) */
+select::-ms-expand {
+  display: none;
+}
+@media (max-width: 1080px) {
+  h2 {
+    font-size: 1.5em ;
+  }
+  header, section {
+    width: 60%;
+  }
+  section{
+    height: 50vh;
+  }
+  body, label, input, select{
+    font-size: 5vh;
+  }
+  label{
+    margin: 5vh;
+    font-size: 6vh;
+  }
+  input, select {
+    display: flex;
+    width: 90%;
+    padding: 2vh;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  select {
+    margin-top: 5vh;
+  }
+  input[type="number"]::placeholder {
+    color: #ffffff;
+    font-size: 5vh;
+    font-style: oblique;
+  }
+}
+
+/* Стили для настольных компьютеров */
+@media (min-width: 1081px) {
+  input[type="number"] {
+
+  }
+}
+
